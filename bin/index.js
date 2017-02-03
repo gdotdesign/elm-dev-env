@@ -36,7 +36,8 @@ program
   })
 
 program
-  .command('help', 'Output usage information', { isDefault: true })
+  .command('help')
+  .description('Output usage information')
   .action(function(env, opts) {
     program.outputHelp()
   })
