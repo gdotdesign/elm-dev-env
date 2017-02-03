@@ -1,7 +1,7 @@
 var which = require('npm-which')(__dirname)
 var spawn = require('child_process').spawn
 
-modeule.exports = function(){
+module.exports = function(){
   var dashDashIndex = process.argv.indexOf("--")
   var additionalFlags = process.argv.slice(3)
 

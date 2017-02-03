@@ -1,6 +1,6 @@
 exports.scaffold = require('./lib/command/scaffold')
 exports.install = require('./lib/command/install')
-exports.specs = require('./lib/commands/specs')
 exports.build = require('./lib/command/build')
 exports.serve = require('./lib/command/serve')
+exports.spec = require('./lib/command/spec')
 exports.docs = require('./lib/command/docs')
