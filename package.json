@@ -1,0 +1,44 @@
+{
+  "name": "elm-dev-env",
+  "version": "1.0.0",
+  "description": "Development environment for writing Elm apps",
+  "scripts": {
+    "elm-dev": "bin/index.js"
+  },
+  "homepage": "https://github.com/gdotdesign/elm-dev-env#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdotdesign/elm-dev-env.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/gdotdesign/elm-dev-env/issues"
+  },
+  "dependencies": {
+    "async": "2.1.4",
+    "autoprefixer": "6.5.3",
+    "browser-sync": "2.18.2",
+    "clean-css": "3.4.21",
+    "commander": "2.9.0",
+    "elm": "0.18.0",
+    "elm-spec": "1.0.12",
+    "elm-github-install": "^0.3.0",
+    "highlight.js": "^9.8.0",
+    "koa": "1.2.4",
+    "koa-router": "5.4.0",
+    "koa-static": "2.0.0",
+    "ncp": "2.0.0",
+    "node-sass": "3.13.0",
+    "npm-which": "3.0.1",
+    "temp": "^0.8.3",
+    "uglify-js": "2.6.2"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "elm-dev": "bin/index.js"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}
