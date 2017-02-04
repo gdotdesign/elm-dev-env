@@ -12,6 +12,7 @@ import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
 import Html exposing (..)
 
+
 {-| Representation of a counter.
 -}
 type alias Model =

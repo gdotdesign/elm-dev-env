@@ -1,20 +1,20 @@
 var browserSync = require('browser-sync').create()
-var serve = require('koa-static')
 var KoaRouter = require('koa-router')
+var serve = require('koa-static')
 var path = require('path')
 var app = require('koa')()
 var fs = require('fs')
 
 var renderHtml = require('../render/html')
+var readConfig = require('./read-config')
 var renderElm = require('../render/elm')
 var renderCSS = require('../render/css')
-var readConfig = require('./read-config')
 
 module.exports = function (options) {
   var router = new KoaRouter({ prefix: options.prefix })
 
-  browserSync.watch('source/**/*.elm').on('change', browserSync.reload)
   browserSync.watch('public/**/*.html').on('change', browserSync.reload)
+  browserSync.watch('source/**/*.elm').on('change', browserSync.reload)
 
   browserSync.watch('stylesheets/**/*.scss', function (event, file) {
     if (event === 'change') {

@@ -10,6 +10,7 @@ specs =
         , text = "0"
         }
       ]
+
     , context "Clicking on increment"
       [ it "increments the counter"
         [ steps.click "button:first-of-type"
@@ -19,6 +20,7 @@ specs =
           }
         ]
       ]
+
     , context "Clicking on decrement"
       [ it "increments the counter"
         [ steps.click "button:last-of-type"
@@ -33,7 +35,7 @@ specs =
 main =
   runWithProgram
     { subscriptions = \_ -> Sub.none
-    , update = update
     , init = \_ -> init
+    , update = update
     , view = view
     } specs
