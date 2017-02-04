@@ -60,7 +60,6 @@ module.exports = function (file, debug, config, shouldFail) {
             .replace('setTimeout(work, 0);', 'requestAnimationFrame(work);')
         ].join('\n')
         callback(null, contents)
-        fs.unlink(filename)
       }
     })
   }
