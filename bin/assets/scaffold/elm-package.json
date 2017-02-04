@@ -7,7 +7,9 @@
     "source",
     "spec"
   ],
-  "exposed-modules": [],
+  "exposed-modules": [
+    "Counter"
+  ],
   "dependencies": {
     "gdotdesign/elm-spec": "1.0.12 <= v < 2.0.0",
     "elm-lang/core": "5.0.0 <= v < 6.0.0",

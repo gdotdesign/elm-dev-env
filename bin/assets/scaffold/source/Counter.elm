@@ -1,25 +1,41 @@
 module Counter exposing (..)
 
+{-| A counter component.
+
+# Model
+@docs Model, Msg, init, update
+
+# View
+@docs view
+-}
 import Html.Attributes exposing (class)
 import Html.Events exposing (onClick)
 import Html exposing (..)
 
+{-| Representation of a counter.
+-}
 type alias Model =
   { counter : Int
   }
 
 
+{-| Messages that a counter can receive.
+-}
 type Msg
   = Increment
   | Decrement
 
 
+{-| Initializes a counter.
+-}
 init : Model
 init =
   { counter = 0
   }
 
 
+{-| Updates a counter.
+-}
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
   case msg of
@@ -30,6 +46,8 @@ update msg model =
       ( { model | counter = model.counter - 1 }, Cmd.none )
 
 
+{-| Renders a counter.
+-}
 view : Model -> Html.Html Msg
 view model =
   article []

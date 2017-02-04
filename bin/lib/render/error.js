@@ -143,13 +143,13 @@ var htmlErrorContent = `
 </html>
 `.replace(/\n/g, '')
 
-var renderError = function(error) {
+var renderError = function (error) {
   var code =
     fs.readFileSync(error.file, 'utf-8')
       .split(/\n/)
-      .map(function(line, index) { return `${index} | ${line}` })
+      .map(function (line, index) { return `${index} | ${line}` })
       .slice(error.region.start.line - 3, error.region.end.line + 2)
-      .join("\n")
+      .join('\n')
 
   return `
   <div class="error">
@@ -158,38 +158,37 @@ var renderError = function(error) {
       ${error.overview}
     </strong>
     <div class="file">${path.relative('', error.file)}</div>
-    <pre>${hljs.highlight("elm", code, true).value}</pre>
+    <pre>${hljs.highlight('elm', code, true).value}</pre>
     <p>${error.details}</p>
   </div>
-  `.replace(/\"/g, "\\\"")
-  .replace(/\n/g, "\\n")
+  `.replace(/"/g, '\\"')
+  .replace(/\n/g, '\\n')
 }
 
-var renderHTMLError = function(title, content) {
+var renderHTMLError = function (title, content) {
+  var errors = ''
+
   try {
     var parts =
       content
-        .split(/(\[.*\])/g)
-        .map(function(part){ return part.trim() })
-        .filter(function(part){ return part !== "" })
-        .map(function(part) { return JSON.parse(part) })
-        .reduce(function(a,b) { return a.concat(b) })
+        .split(/(\[.*])/g)
+        .map(function (part) { return part.trim() })
+        .filter(function (part) { return part !== '' })
+        .map(function (part) { return JSON.parse(part) })
+        .reduce(function (a, b) { return a.concat(b) })
 
-    var errors =
+    errors =
       parts
-        .map(function(error){
-          return renderError(error)
-        })
-        .join("")
-
+        .map(function (error) { return renderError(error) })
+        .join('')
   } catch (e) {
     var formatted =
       content
         .replace(/\\/g, '\\\\')
         .replace(/"/g, '\\"')
-        .replace(/\n/g, "\\n")
+        .replace(/\n/g, '\\n')
 
-    var errors = `<pre>${formatted}</pre>`
+    errors = `<pre>${formatted}</pre>`
   }
 
   var errorContent = htmlErrorContent
@@ -199,9 +198,9 @@ var renderHTMLError = function(title, content) {
   return `document.write("${errorContent}")`
 }
 
-var renderCSSError = function(title, content) {
+var renderCSSError = function (title, content) {
   var formattedContent =
-    content.replace(/\n/g, "\\A").replace(/"/g, '\\"')
+    content.replace(/\n/g, '\\A').replace(/"/g, '\\"')
 
   return `
     body::before {

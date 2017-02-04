@@ -9,16 +9,16 @@ var async = require('async')
 var path = require('path')
 var fs = require('fs')
 
-var formatError = function(error) {
+var formatError = function (error) {
   return error
     .split('\n')
-    .map(function(line) {
+    .map(function (line) {
       return '  > ' + line
     })
     .join('\n')
 }
 
-module.exports = function(options) {
+module.exports = function (options) {
   var destination = path.resolve('dist')
   var config = readConfig(options)
 
@@ -33,7 +33,7 @@ module.exports = function(options) {
     buildHtml(),
     buildElm(options.main || 'Main', false, config, true),
     buildCSS(true)
-  ], function(error, results) {
+  ], function (error, results) {
     if (error) {
       console.log(formatError(error))
       console.log('\nBuild failed!')

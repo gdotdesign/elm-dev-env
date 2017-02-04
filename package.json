@@ -22,8 +22,8 @@
     "clean-css": "3.4.21",
     "commander": "2.9.0",
     "elm": "0.18.0",
-    "elm-spec": "1.0.12",
     "elm-github-install": "^0.3.0",
+    "elm-spec": "1.0.12",
     "highlight.js": "^9.8.0",
     "koa": "1.2.4",
     "koa-router": "5.4.0",
@@ -40,5 +40,11 @@
   },
   "engines": {
     "node": ">= 4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "request": "^2.79.0",
+    "standard": "^8.6.0"
   }
 }
