@@ -22,7 +22,7 @@
     "clean-css": "3.4.21",
     "commander": "2.9.0",
     "elm": "0.18.0",
-    "elm-github-install": "^1.0.0",
+    "elm-github-install": "^1.0.1",
     "elm-spec": "1.0.12",
     "highlight.js": "^9.8.0",
     "koa": "1.2.4",
