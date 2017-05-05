@@ -161,7 +161,8 @@ var renderError = function (error) {
     <pre>${hljs.highlight('elm', code, true).value}</pre>
     <p>${error.details}</p>
   </div>
-  `.replace(/"/g, '\\"')
+  `.replace(/\\/g, '\\\\')
+  .replace(/"/g, '\\"')
   .replace(/\n/g, '\\n')
 }
 
