@@ -46,14 +46,16 @@ program
 
 program
   .command('server')
-  .option('-p, --prefix [prefix]', 'path prefix')
+  .option('-f, --prefix [prefix]', 'path prefix')
+  .option('-p, --port [port]', 'port')
   .option('-d, --debug', "use Elm's debugger")
   .alias('start')
   .description('Starts development server')
   .action(function (env, opts) {
     elmDev.serve({
-      env: program.env,
+      port: parseInt(env.port) || 8001,
       prefix: env.prefix || '',
+      env: program.env,
       debug: env.debug
     })
   })

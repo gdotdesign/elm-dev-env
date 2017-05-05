@@ -63,7 +63,7 @@ module.exports = function (options) {
     .use(serve(path.resolve('public')))
     .use(router.routes())
 
-  app.listen(8001)
+  app.listen(options.port)
 
-  console.log('Listening on localhost:8001')
+  console.log(`Listening on localhost:${options.port}`)
 }
