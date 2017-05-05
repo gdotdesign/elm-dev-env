@@ -17,8 +17,9 @@ var htmlErrorContent = `
 
     .error pre {
       border: 1px solid rgba(0,0,0,0.1);
-      line-height: 18px;
       background: #F9F9F9;
+      line-height: 18px;
+      overflow: auto;
       padding: 10px;
       margin-top: 0;
     }
