@@ -23,7 +23,7 @@
     "commander": "2.9.0",
     "elm": "0.18.0",
     "elm-github-install": "^1.0.1",
-    "elm-spec": "1.0.12",
+    "elm-spec": "1.1.1",
     "highlight.js": "^9.8.0",
     "koa": "1.2.4",
     "koa-router": "5.4.0",

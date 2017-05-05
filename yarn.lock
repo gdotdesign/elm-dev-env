@@ -642,7 +642,7 @@ cssom@0.3.x, "cssom@>= 0.3.0 < 0.4.0":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.3.2.tgz#b8036170c79f07a90ff2f16e22284027a243848b"
 
-"cssstyle@>= 0.2.36 < 0.3.0":
+"cssstyle@>= 0.2.36 < 0.3.0", cssstyle@^0.2.37:
   version "0.2.37"
   resolved "https://registry.yarnpkg.com/cssstyle/-/cssstyle-0.2.37.tgz#541097234cb2513c83ceed3acddc27ff27987d54"
   dependencies:
@@ -788,16 +788,6 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
-elm-github-install@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/elm-github-install/-/elm-github-install-0.3.1.tgz#1875d2fddb2d654297bb32c9b1bfcac95dca71ce"
-  dependencies:
-    adm-zip "^0.4.7"
-    request "2.74.0"
-    shelljs "0.7.5"
-    tar-fs "1.15.0"
-    tmp "^0.0.31"
-
 elm-github-install@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/elm-github-install/-/elm-github-install-1.0.1.tgz#8be5847f5d586078c0d3f658f56dc4fad4f988ff"
@@ -808,15 +798,16 @@ elm-github-install@^1.0.1:
     tar-fs "1.15.0"
     tmp "^0.0.31"
 
-elm-spec@1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/elm-spec/-/elm-spec-1.0.12.tgz#ed56afc3d47d7809e3c61def98e913e790a7fcb3"
+elm-spec@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/elm-spec/-/elm-spec-1.1.1.tgz#eff5cbdca32f0a81d449eec9176436d07fc99a59"
   dependencies:
     async "^2.1.4"
     camelcase "^4.0.0"
     colors "^1.1.2"
+    cssstyle "^0.2.37"
     elm "^0.18.0"
-    elm-github-install "^0.3.0"
+    elm-github-install "^1.0.1"
     globby "^6.1.0"
     indent-string "^3.0.0"
     jsdom "^9.9.1"
