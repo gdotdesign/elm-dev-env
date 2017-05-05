@@ -1,6 +1,6 @@
 {
   "name": "elm-dev-env",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Development environment for writing Elm apps",
   "scripts": {
     "elm-dev": "bin/index.js"
