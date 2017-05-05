@@ -798,9 +798,9 @@ elm-github-install@^0.3.0:
     tar-fs "1.15.0"
     tmp "^0.0.31"
 
-elm-github-install@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/elm-github-install/-/elm-github-install-1.0.0.tgz#559fd85ab16fbbf6358a23057092c4c4a94ddf6f"
+elm-github-install@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/elm-github-install/-/elm-github-install-1.0.1.tgz#8be5847f5d586078c0d3f658f56dc4fad4f988ff"
   dependencies:
     adm-zip "^0.4.7"
     request "2.74.0"
