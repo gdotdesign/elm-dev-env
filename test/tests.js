@@ -104,55 +104,6 @@ describe('Tests', function () {
         })
       })
 
-      describe('Spec', function () {
-        it('runs elm-spec', function () {
-          var result =
-            spawnSync('node',
-                      ['../bin/index.js', 'spec'],
-                      { cwd: 'test-app' })
-
-          expect(result.status)
-            .to.equal(0)
-
-          expect(result.stderr.toString())
-            .to.equal('')
-
-          expect(result.stdout.toString())
-            .to.contain('6 steps: 6 successfull, 0 failed, 0 errored')
-        })
-
-        it('allows passing file path', function () {
-          var result =
-            spawnSync('node',
-                      ['../bin/index.js', 'spec', 'spec/CounterSpec.elm'],
-                      { cwd: 'test-app' })
-
-          expect(result.status)
-            .to.equal(0)
-
-          expect(result.stderr.toString())
-            .to.equal('')
-
-          expect(result.stdout.toString())
-            .to.contain('6 steps: 6 successfull, 0 failed, 0 errored')
-        })
-
-        it('allows passing options', function () {
-          var result =
-            spawnSync('node',
-                      ['../bin/index.js', 'spec', '--', '-f', 'progress'],
-                      { cwd: 'test-app' })
-
-          expect(result.status)
-            .to.equal(0)
-
-          expect(result.stderr.toString())
-            .to.equal('')
-
-          expect(result.stdout.toString())
-            .to.contain('..')
-        })
-      })
 
       describe('Build', function () {
         it('build final files', function () {

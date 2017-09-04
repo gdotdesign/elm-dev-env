@@ -16,13 +16,6 @@ program
   })
 
 program
-  .command('spec')
-  .description('Runs specs')
-  .action(function (env, opts) {
-    elmDev.spec()
-  })
-
-program
   .command('docs')
   .description('Generates Elm documentation')
   .action(function (env, opts) {
