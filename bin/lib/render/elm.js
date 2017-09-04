@@ -2,7 +2,7 @@ var renderError = require('./error').renderHTMLError
 var which = require('npm-which')(__dirname)
 var spawn = require('child_process').spawn
 var temp = require('temp').track()
-var babel = require("babel-core")
+var babel = require('babel-core')
 var fs = require('fs')
 
 // Find the elm-make executable
@@ -61,7 +61,8 @@ module.exports = function (file, debug, config, shouldFail) {
             .replace('setTimeout(work, 0);', 'requestAnimationFrame(work);')
         ].join('\n')
 
-        callback(null, babel.transform(contents, { presets: ['es2015'] }).code)
+        callback(null, babel.transform(
+          contents, { presets: [['es2015', { modules: false }]] }).code)
       }
     })
   }
