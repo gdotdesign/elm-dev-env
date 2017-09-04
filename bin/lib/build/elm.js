@@ -1,5 +1,5 @@
 var renderElm = require('../render/elm')
-var uglifyJS = require('uglify-js')
+var uglifyJS = require('uglify-es')
 var path = require('path')
 var fs = require('fs')
 
