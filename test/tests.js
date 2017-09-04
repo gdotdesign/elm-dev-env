@@ -104,7 +104,6 @@ describe('Tests', function () {
         })
       })
 
-
       describe('Build', function () {
         it('build final files', function () {
           var result =
@@ -112,14 +111,14 @@ describe('Tests', function () {
                       ['../bin/index.js', 'build'],
                       { cwd: 'test-app' })
 
-          expect(result.status)
-            .to.equal(0)
-
           expect(result.stderr.toString())
             .to.equal('')
 
           expect(result.stdout.toString())
             .to.contain('Build succeeded!')
+
+          expect(result.status)
+            .to.equal(0)
 
           expect(fs.existsSync('test-app/dist'))
             .to.equal(true)
