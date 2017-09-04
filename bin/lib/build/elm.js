@@ -15,9 +15,7 @@ module.exports = function (file, debug, config, shouldFail) {
         return callback(err, null)
       }
 
-      var minified = uglifyJS.minify(contents, {
-        fromString: true
-      })
+      var minified = uglifyJS.minify(contents)
 
       fs.writeFileSync(destination, minified.code)
 
