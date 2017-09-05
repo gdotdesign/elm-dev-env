@@ -1,5 +1,6 @@
 var renderElm = require('../render/elm')
 var uglifyJS = require('uglify-js')
+var babel = require('babel-core')
 var path = require('path')
 var fs = require('fs')
 
@@ -15,7 +16,12 @@ module.exports = function (file, debug, config, shouldFail) {
         return callback(err, null)
       }
 
-      var minified = uglifyJS.minify(contents)
+      var trasnformed =
+        babel
+          .transform(contents, { presets: [['es2015', { modules: false }]] })
+          .code
+
+      var minified = uglifyJS.minify(trasnformed)
 
       fs.writeFileSync(destination, minified.code)
 
