@@ -24,7 +24,7 @@
     "clean-css": "3.4.21",
     "commander": "2.9.0",
     "elm": "0.18.0",
-    "elm-github-install": "1.4.0",
+    "elm-github-install": "1.6.0",
     "highlight.js": "^9.8.0",
     "koa": "1.2.4",
     "koa-router": "5.4.0",
